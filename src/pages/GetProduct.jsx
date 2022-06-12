@@ -3,6 +3,6 @@ import { Header } from './../components/Header';
 
 export const GetProduct = () => {
   return <>
-    <Header title={"Get Producto"}></Header>
+    <Header title={"Get Producto"} canBack={true} path={"/"}></Header>
   </>;
 };

@@ -28,6 +28,10 @@
 
   --colorBlanco : hsl(220, 12%, 95%);
   --colorOscuro : hsl(220, 12%, 5%);
+
+  --colorVerde    : hsl(128, 80%, 40%);
+  --colorAmarillo : hsl(54, 90%, 55%);
+  --colorRojo     : hsl(0, 80%, 40%)
 }
 html{ 
   font-size: 62.5%;
@@ -45,6 +49,7 @@ p, span, ul, li, a {
 button{
   border-width: none;
   border-style: none;
+  background-color: transparent;
 }
 
 /* Componentes que estarán a lo largo de todo el proyecto, tanto movil como web */
@@ -56,19 +61,26 @@ button{
 }
 
 
+
+
 /* First mobil */
 
 
-header{
-  width: 100%;
-  height: 7.5rem;
-  background-color: var(--colorPrincipal);
-}
 input{
   padding: 1rem;
   border-radius: 1rem;
   display: inline-block;
   border-style: none;
+}
+
+textarea{
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+main{
+  padding: 2rem;
+  width: 100vw;
 }
 label{
   padding: 1rem 0;
@@ -91,11 +103,49 @@ h3{
   font-size: 1.6rem;
 }
 
-main{
+/* Header */
+
+.header{
+  width: 100%;
+  height: 7.5rem;
+  background-color: var(--colorPrincipal);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  padding:0 2rem;
+}
+.header h1{
+  margin: 0 auto;
   padding: 2rem;
-  width: 100vw;
+  align-self: center;
+}
+.header__text{
+  padding: 2rem auto;
+  font-size: 2.4rem;
+}
+.navButton{
+  padding: 2rem;
+  font-size: 4rem;
+  color: var(--colorBlanco)
 }
 
+.menuMovil{
+  padding: 2rem;
+  font-size: 4rem;
+  color: var(--colorBlanco)
+}
+
+
+
+.container{
+  background-color: var(--colorGris4);
+  padding: 2rem;
+}
+.text-red{
+  color: var(--colorRojo)
+}
+/* Login */
 .login{
   margin: auto;
   margin-top: 2rem;
@@ -106,10 +156,7 @@ main{
   align-items: center;
   text-align: center;
 }
-.container{
-  background-color: var(--colorGris4);
-  padding: 2rem;
-}
+
 
 .login__form{
   align-content: center;
@@ -142,8 +189,48 @@ main{
   margin-right: auto;
 }
 
+/* Home */
+.button__add{
+  background-color: var(--colorVerde);
+  color: var(--colorBlanco);
+  font-size: 2rem;
+  width: 10rem;
+}
+.button__add__text{
+  display: none;
+}
+/* Agregar producto */
+.addProduct{
+  margin: auto;
+  margin-top: 2rem;
+  align-content: center;
+  height:100%;
+  max-width: 50rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-
+.addProduct__input{
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+.addProduct__textArea{
+  width: 100%;
+  height: 15rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+.addProduct__inputImage{
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  height: 10rem;
+  border: dashed var(--colorOscuro) .5rem;
+}
 
 @media screen and (min-width : 769px) {
 
